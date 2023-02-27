@@ -1,0 +1,15 @@
+package service.reducetozero;
+
+public class NumberReducer {
+
+    public int stepsToReduceToZero(int num){
+        int count = 0;
+        while (num > 0){
+            num = num % 2 == 0
+                    ? num / 2
+                    : num - 1;
+            count++;
+        }
+        return count;
+    }
+}
